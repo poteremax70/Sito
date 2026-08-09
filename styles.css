@@ -13,20 +13,29 @@ body {
 body {
   min-height: 100vh;
   font-family: Arial, Helvetica, sans-serif;
+
   background:
-    linear-gradient(rgba(18, 13, 10, 0.18), rgba(18, 13, 10, 0.18)),
+    linear-gradient(
+      rgba(18, 13, 10, 0.18),
+      rgba(18, 13, 10, 0.18)
+    ),
     url("sfondo.png") center center / cover no-repeat fixed;
+
   color: #ffffff;
 }
 
+/* PAGINA */
 .page {
   width: 100%;
   min-height: 100vh;
+
   padding: 35px 20px 25px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   text-align: center;
 }
 
@@ -34,9 +43,11 @@ body {
 .photos {
   width: 100%;
   max-width: 850px;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
   gap: 24px;
   margin-bottom: 28px;
 }
@@ -44,53 +55,67 @@ body {
 /* FOTO */
 .page-photo {
   display: block;
+
   width: min(18vw, 110px);
   height: min(18vw, 110px);
+
   object-fit: cover;
+
   border-radius: 22px;
   border: 3px solid rgba(255, 255, 255, 0.9);
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
+
+  box-shadow:
+    0 8px 28px rgba(0, 0, 0, 0.45);
 }
 
 /* TITOLO */
 h1 {
   margin: 4px 0 24px;
+
   font-size: clamp(32px, 7vw, 58px);
   font-weight: 700;
   line-height: 1.1;
-  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.65);
+
+  text-shadow:
+    0 3px 8px rgba(0, 0, 0, 0.65);
 }
 
-/* CONTENITORE PULSANTI */
+/* CONTENITORE DEI PULSANTI */
 .buttons {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 0;
+
+  width: 100%;
 }
 
-/* PULSANTI CHAT */
+/* PULSANTI */
 .chat-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
   gap: 10px;
 
-  min-width: 190px;
-  padding: 15px 30px;
+  width: 190px;
+  min-height: 58px;
+
+  padding: 13px 25px;
 
   color: #ffffff;
+
   background: rgba(18, 13, 10, 0.88);
 
   border: 2px solid rgba(255, 255, 255, 0.85);
   border-radius: 50px;
 
   text-decoration: none;
+
   font-size: 20px;
   font-weight: 700;
 
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+  box-shadow:
+    0 6px 20px rgba(0, 0, 0, 0.45);
 
   transition:
     transform 0.2s ease,
@@ -98,84 +123,147 @@ h1 {
     box-shadow 0.2s ease;
 }
 
+/* EFFETTO AL PASSAGGIO */
 .chat-button:hover {
   transform: translateY(-2px);
+
   background: rgba(18, 13, 10, 1);
-  box-shadow: 0 9px 26px rgba(0, 0, 0, 0.55);
+
+  box-shadow:
+    0 9px 26px rgba(0, 0, 0, 0.55);
 }
 
+/* PRESSIONE */
 .chat-button:active {
   transform: scale(0.97);
 }
 
+/* ICONA */
 .chat-icon {
   font-size: 24px;
   line-height: 1;
 }
 
-/* SECONDO PULSANTE
-   Viene posizionato molto più in basso,
-   nella zona dove prima compariva
-   la piccola scritta Libera🇮🇹 Chat */
+/*
+   SECONDO PULSANTE
+
+   Lo teniamo più in basso,
+   nella posizione dove prima
+   compariva la piccola scritta
+   "Libera🇮🇹 Chat".
+*/
 .second-chat {
-  margin-top: 95px;
+  margin-top: 60px;
 }
 
-/* TELEFONO */
+
+/* =========================================
+   TELEFONI
+   ========================================= */
+
 @media (max-width: 650px) {
+
   .page {
-    padding: 25px 14px 20px;
+    min-height: 100vh;
+
+    padding:
+      35px
+      14px
+      25px;
+
+    justify-content: flex-start;
   }
 
+  /* FOTO */
   .photos {
     gap: 12px;
-    margin-bottom: 22px;
+    margin-bottom: 18px;
   }
 
   .page-photo {
     width: calc(22vw - 10px);
     height: calc(22vw - 10px);
+
     max-width: 90px;
     max-height: 90px;
+
     border-radius: 14px;
     border-width: 2px;
   }
 
+  /* TITOLO */
   h1 {
     font-size: 38px;
-    margin-bottom: 20px;
+
+    margin-top: 0;
+    margin-bottom: 18px;
+
+    line-height: 1.1;
+  }
+
+  /* PULSANTI */
+  .buttons {
+    width: 100%;
   }
 
   .chat-button {
-    min-width: 175px;
-    padding: 13px 25px;
+    width: 175px;
+    min-height: 55px;
+
+    padding: 13px 20px;
+
     font-size: 18px;
   }
 
+  .chat-icon {
+    font-size: 23px;
+  }
+
+  /* SECONDO PULSANTE */
   .second-chat {
-    margin-top: 75px;
+    margin-top: 55px;
   }
 }
 
-/* SCHERMI MOLTO PICCOLI */
+
+/* =========================================
+   TELEFONI MOLTO PICCOLI
+   ========================================= */
+
 @media (max-width: 380px) {
+
+  .page {
+    padding-top: 30px;
+  }
+
   .photos {
     gap: 8px;
+    margin-bottom: 16px;
   }
 
   .page-photo {
     width: calc(22vw - 8px);
     height: calc(22vw - 8px);
+
     max-width: 75px;
     max-height: 75px;
+
     border-radius: 11px;
   }
 
   h1 {
     font-size: 34px;
+    margin-bottom: 16px;
+  }
+
+  .chat-button {
+    width: 170px;
+    min-height: 53px;
+
+    font-size: 17px;
   }
 
   .second-chat {
-    margin-top: 65px;
+    margin-top: 50px;
   }
 }
