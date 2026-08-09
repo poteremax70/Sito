@@ -44,8 +44,8 @@ body {
 /* FOTO */
 .page-photo {
   display: block;
-  width: min(42vw, 360px);
-  height: min(42vw, 360px);
+  width: min(30vw, 220px);
+  height: min(30vw, 220px);
   object-fit: cover;
   border-radius: 22px;
   border: 3px solid rgba(255, 255, 255, 0.9);
@@ -132,10 +132,10 @@ footer {
   }
 
   .page-photo {
-    width: calc(50vw - 25px);
-    height: calc(50vw - 25px);
-    max-width: 220px;
-    max-height: 220px;
+    width: calc(38vw - 20px);
+    height: calc(38vw - 20px);
+    max-width: 150px;
+    max-height: 150px;
     border-radius: 16px;
     border-width: 2px;
   }
@@ -167,8 +167,10 @@ footer {
   }
 
   .page-photo {
-    width: calc(50vw - 20px);
-    height: calc(50vw - 20px);
+    width: calc(38vw - 16px);
+    height: calc(38vw - 16px);
+    max-width: 130px;
+    max-height: 130px;
     border-radius: 13px;
   }
 
