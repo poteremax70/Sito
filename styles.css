@@ -64,12 +64,13 @@ h1 {
 /* CONTENITORE PULSANTI */
 .buttons {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  gap: 16px;
+  gap: 0;
 }
 
-/* PULSANTE CHAT */
+/* PULSANTI CHAT */
 .chat-button {
   display: inline-flex;
   align-items: center;
@@ -112,12 +113,12 @@ h1 {
   line-height: 1;
 }
 
-/* FOOTER */
-footer {
-  margin-top: 30px;
-  font-size: 14px;
-  opacity: 0.85;
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+/* SECONDO PULSANTE
+   Viene posizionato molto più in basso,
+   nella zona dove prima compariva
+   la piccola scritta Libera🇮🇹 Chat */
+.second-chat {
+  margin-top: 95px;
 }
 
 /* TELEFONO */
@@ -145,18 +146,14 @@ footer {
     margin-bottom: 20px;
   }
 
-  .buttons {
-    gap: 12px;
-  }
-
   .chat-button {
     min-width: 175px;
     padding: 13px 25px;
     font-size: 18px;
   }
 
-  footer {
-    margin-top: 24px;
+  .second-chat {
+    margin-top: 75px;
   }
 }
 
@@ -176,5 +173,9 @@ footer {
 
   h1 {
     font-size: 34px;
+  }
+
+  .second-chat {
+    margin-top: 65px;
   }
 }
