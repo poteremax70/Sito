@@ -1,0 +1,178 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background:
+    linear-gradient(rgba(18, 13, 10, 0.18), rgba(18, 13, 10, 0.18)),
+    url("sfondo.png") center center / cover no-repeat fixed;
+  color: #ffffff;
+}
+
+.page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 35px 20px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* CONTENITORE DELLE DUE FOTO */
+.photos {
+  width: 100%;
+  max-width: 850px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+/* FOTO */
+.page-photo {
+  display: block;
+  width: min(42vw, 360px);
+  height: min(42vw, 360px);
+  object-fit: cover;
+  border-radius: 22px;
+  border: 3px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
+}
+
+/* TITOLO */
+h1 {
+  margin: 4px 0 24px;
+  font-size: clamp(32px, 7vw, 58px);
+  font-weight: 700;
+  line-height: 1.1;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.65);
+}
+
+/* CONTENITORE PULSANTI */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* PULSANTE CHAT */
+.chat-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  min-width: 190px;
+  padding: 15px 30px;
+
+  color: #ffffff;
+  background: rgba(18, 13, 10, 0.88);
+
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  border-radius: 50px;
+
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.chat-button:hover {
+  transform: translateY(-2px);
+  background: rgba(18, 13, 10, 1);
+  box-shadow: 0 9px 26px rgba(0, 0, 0, 0.55);
+}
+
+.chat-button:active {
+  transform: scale(0.97);
+}
+
+.chat-icon {
+  font-size: 24px;
+  line-height: 1;
+}
+
+/* FOOTER */
+footer {
+  margin-top: 30px;
+  font-size: 14px;
+  opacity: 0.85;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* TELEFONO */
+@media (max-width: 650px) {
+  .page {
+    padding: 25px 14px 20px;
+  }
+
+  .photos {
+    gap: 12px;
+    margin-bottom: 22px;
+  }
+
+  .page-photo {
+    width: calc(50vw - 25px);
+    height: calc(50vw - 25px);
+    max-width: 220px;
+    max-height: 220px;
+    border-radius: 16px;
+    border-width: 2px;
+  }
+
+  h1 {
+    font-size: 38px;
+    margin-bottom: 20px;
+  }
+
+  .buttons {
+    gap: 12px;
+  }
+
+  .chat-button {
+    min-width: 175px;
+    padding: 13px 25px;
+    font-size: 18px;
+  }
+
+  footer {
+    margin-top: 24px;
+  }
+}
+
+/* SCHERMI MOLTO PICCOLI */
+@media (max-width: 380px) {
+  .photos {
+    gap: 8px;
+  }
+
+  .page-photo {
+    width: calc(50vw - 20px);
+    height: calc(50vw - 20px);
+    border-radius: 13px;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+}
