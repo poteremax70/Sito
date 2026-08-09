@@ -24,12 +24,10 @@ body {
   color: #ffffff;
 }
 
-/* PAGINA */
 .page {
   width: 100%;
   min-height: 100vh;
-
-  padding: 35px 20px 25px;
+  padding: 30px 20px 25px;
 
   display: flex;
   flex-direction: column;
@@ -39,49 +37,55 @@ body {
   text-align: center;
 }
 
-/* STICKER IN ALTO */
+/* =========================
+   STICKER
+   ========================= */
+
 .stickers {
   width: 100%;
-  max-width: 700px;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  gap: 30px;
+  gap: 14px;
 
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
-/* IMMAGINI STICKER */
 .sticker {
   display: block;
 
-  width: min(30vw, 190px);
-  height: min(30vw, 190px);
+  width: 125px;
+  height: 125px;
 
   object-fit: contain;
 
-  border-radius: 20px;
+  border-radius: 18px;
 
   filter:
-    drop-shadow(0 8px 15px rgba(0, 0, 0, 0.45));
+    drop-shadow(0 6px 12px rgba(0, 0, 0, 0.45));
 }
 
-/* TITOLO */
+/* =========================
+   TITOLO
+   ========================= */
+
 h1 {
-  margin: 4px 0 24px;
+  margin: 0 0 22px;
 
   font-size: clamp(32px, 7vw, 58px);
   font-weight: 700;
-
   line-height: 1.1;
 
   text-shadow:
     0 3px 8px rgba(0, 0, 0, 0.65);
 }
 
-/* CONTENITORE PULSANTI */
+/* =========================
+   PULSANTI
+   ========================= */
+
 .buttons {
   display: flex;
   flex-direction: column;
@@ -90,7 +94,6 @@ h1 {
   width: 100%;
 }
 
-/* PULSANTI */
 .chat-button {
   display: inline-flex;
 
@@ -109,7 +112,6 @@ h1 {
   background: rgba(18, 13, 10, 0.88);
 
   border: 2px solid rgba(255, 255, 255, 0.85);
-
   border-radius: 50px;
 
   text-decoration: none;
@@ -126,7 +128,6 @@ h1 {
     box-shadow 0.2s ease;
 }
 
-/* EFFETTO */
 .chat-button:hover {
   transform: translateY(-2px);
 
@@ -136,70 +137,52 @@ h1 {
     0 9px 26px rgba(0, 0, 0, 0.55);
 }
 
-/* PRESSIONE */
 .chat-button:active {
   transform: scale(0.97);
 }
 
-/* ICONE */
 .chat-icon {
   font-size: 24px;
   line-height: 1;
 }
 
-/* SECONDO PULSANTE */
+/* Secondo pulsante */
 .second-chat {
-  margin-top: 60px;
+  margin-top: 55px;
 }
 
 
-/* =========================================
-   TELEFONI
-   ========================================= */
+/* =========================
+   TELEFONO
+   ========================= */
 
 @media (max-width: 650px) {
 
   .page {
     min-height: 100vh;
 
-    padding:
-      35px
-      14px
-      25px;
+    padding: 28px 14px 25px;
 
     justify-content: flex-start;
   }
 
-  /* STICKER */
   .stickers {
     gap: 12px;
 
-    margin-bottom: 18px;
+    margin-bottom: 16px;
   }
 
   .sticker {
-    width: calc(34vw - 5px);
-    height: calc(34vw - 5px);
-
-    max-width: 150px;
-    max-height: 150px;
+    width: 120px;
+    height: 120px;
 
     border-radius: 16px;
   }
 
-  /* TITOLO */
   h1 {
     font-size: 38px;
 
-    margin-top: 0;
     margin-bottom: 18px;
-
-    line-height: 1.1;
-  }
-
-  /* PULSANTI */
-  .buttons {
-    width: 100%;
   }
 
   .chat-button {
@@ -216,50 +199,40 @@ h1 {
     font-size: 23px;
   }
 
-  /* SECONDO PULSANTE */
   .second-chat {
     margin-top: 55px;
   }
 }
 
 
-/* =========================================
-   TELEFONI MOLTO PICCOLI
-   ========================================= */
+/* =========================
+   TELEFONI PICCOLI
+   ========================= */
 
 @media (max-width: 380px) {
 
   .page {
-    padding-top: 30px;
+    padding-top: 25px;
   }
 
   .stickers {
     gap: 8px;
-
-    margin-bottom: 16px;
+    margin-bottom: 14px;
   }
 
   .sticker {
-    width: calc(36vw - 8px);
-    height: calc(36vw - 8px);
-
-    max-width: 125px;
-    max-height: 125px;
-
-    border-radius: 12px;
+    width: 105px;
+    height: 105px;
   }
 
   h1 {
     font-size: 34px;
-
     margin-bottom: 16px;
   }
 
   .chat-button {
     width: 170px;
-
     min-height: 53px;
-
     font-size: 17px;
   }
 
