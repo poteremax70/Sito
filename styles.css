@@ -39,33 +39,33 @@ body {
   text-align: center;
 }
 
-/* CONTENITORE DELLE DUE FOTO */
-.photos {
+/* STICKER IN ALTO */
+.stickers {
   width: 100%;
-  max-width: 850px;
+  max-width: 700px;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  gap: 24px;
-  margin-bottom: 28px;
+  gap: 30px;
+
+  margin-bottom: 25px;
 }
 
-/* FOTO */
-.page-photo {
+/* IMMAGINI STICKER */
+.sticker {
   display: block;
 
-  width: min(18vw, 110px);
-  height: min(18vw, 110px);
+  width: min(30vw, 190px);
+  height: min(30vw, 190px);
 
-  object-fit: cover;
+  object-fit: contain;
 
-  border-radius: 22px;
-  border: 3px solid rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
 
-  box-shadow:
-    0 8px 28px rgba(0, 0, 0, 0.45);
+  filter:
+    drop-shadow(0 8px 15px rgba(0, 0, 0, 0.45));
 }
 
 /* TITOLO */
@@ -74,13 +74,14 @@ h1 {
 
   font-size: clamp(32px, 7vw, 58px);
   font-weight: 700;
+
   line-height: 1.1;
 
   text-shadow:
     0 3px 8px rgba(0, 0, 0, 0.65);
 }
 
-/* CONTENITORE DEI PULSANTI */
+/* CONTENITORE PULSANTI */
 .buttons {
   display: flex;
   flex-direction: column;
@@ -92,6 +93,7 @@ h1 {
 /* PULSANTI */
 .chat-button {
   display: inline-flex;
+
   align-items: center;
   justify-content: center;
 
@@ -107,6 +109,7 @@ h1 {
   background: rgba(18, 13, 10, 0.88);
 
   border: 2px solid rgba(255, 255, 255, 0.85);
+
   border-radius: 50px;
 
   text-decoration: none;
@@ -123,7 +126,7 @@ h1 {
     box-shadow 0.2s ease;
 }
 
-/* EFFETTO AL PASSAGGIO */
+/* EFFETTO */
 .chat-button:hover {
   transform: translateY(-2px);
 
@@ -138,20 +141,13 @@ h1 {
   transform: scale(0.97);
 }
 
-/* ICONA */
+/* ICONE */
 .chat-icon {
   font-size: 24px;
   line-height: 1;
 }
 
-/*
-   SECONDO PULSANTE
-
-   Lo teniamo più in basso,
-   nella posizione dove prima
-   compariva la piccola scritta
-   "Libera🇮🇹 Chat".
-*/
+/* SECONDO PULSANTE */
 .second-chat {
   margin-top: 60px;
 }
@@ -174,21 +170,21 @@ h1 {
     justify-content: flex-start;
   }
 
-  /* FOTO */
-  .photos {
+  /* STICKER */
+  .stickers {
     gap: 12px;
+
     margin-bottom: 18px;
   }
 
-  .page-photo {
-    width: calc(22vw - 10px);
-    height: calc(22vw - 10px);
+  .sticker {
+    width: calc(34vw - 5px);
+    height: calc(34vw - 5px);
 
-    max-width: 90px;
-    max-height: 90px;
+    max-width: 150px;
+    max-height: 150px;
 
-    border-radius: 14px;
-    border-width: 2px;
+    border-radius: 16px;
   }
 
   /* TITOLO */
@@ -208,6 +204,7 @@ h1 {
 
   .chat-button {
     width: 175px;
+
     min-height: 55px;
 
     padding: 13px 20px;
@@ -236,28 +233,31 @@ h1 {
     padding-top: 30px;
   }
 
-  .photos {
+  .stickers {
     gap: 8px;
+
     margin-bottom: 16px;
   }
 
-  .page-photo {
-    width: calc(22vw - 8px);
-    height: calc(22vw - 8px);
+  .sticker {
+    width: calc(36vw - 8px);
+    height: calc(36vw - 8px);
 
-    max-width: 75px;
-    max-height: 75px;
+    max-width: 125px;
+    max-height: 125px;
 
-    border-radius: 11px;
+    border-radius: 12px;
   }
 
   h1 {
     font-size: 34px;
+
     margin-bottom: 16px;
   }
 
   .chat-button {
     width: 170px;
+
     min-height: 53px;
 
     font-size: 17px;
