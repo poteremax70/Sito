@@ -44,8 +44,8 @@ body {
 /* FOTO */
 .page-photo {
   display: block;
-  width: min(30vw, 220px);
-  height: min(30vw, 220px);
+  width: min(18vw, 110px);
+  height: min(18vw, 110px);
   object-fit: cover;
   border-radius: 22px;
   border: 3px solid rgba(255, 255, 255, 0.9);
@@ -132,11 +132,11 @@ footer {
   }
 
   .page-photo {
-    width: calc(38vw - 20px);
-    height: calc(38vw - 20px);
-    max-width: 150px;
-    max-height: 150px;
-    border-radius: 16px;
+    width: calc(22vw - 10px);
+    height: calc(22vw - 10px);
+    max-width: 90px;
+    max-height: 90px;
+    border-radius: 14px;
     border-width: 2px;
   }
 
@@ -167,11 +167,11 @@ footer {
   }
 
   .page-photo {
-    width: calc(38vw - 16px);
-    height: calc(38vw - 16px);
-    max-width: 130px;
-    max-height: 130px;
-    border-radius: 13px;
+    width: calc(22vw - 8px);
+    height: calc(22vw - 8px);
+    max-width: 75px;
+    max-height: 75px;
+    border-radius: 11px;
   }
 
   h1 {
